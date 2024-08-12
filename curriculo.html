@@ -24,7 +24,7 @@
     <main class="container mx-auto p-8 pt-32">
         <div class="bg-white p-10 rounded-lg shadow-lg max-w-4xl mx-auto">
 
-            <h1 class="text-4xl font-extrabold text-gray-800 mb-6">Carlos Andemberg da Silva - <span></span></h1>
+            <h1 class="text-4xl font-extrabold text-gray-800 mb-6">Carlos Andemberg da Silva - <span id="idade"></span></h1>
 
             <section class="mb-8">
                 <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-4">Experiência
@@ -65,6 +65,25 @@
             <p>&copy; 2025 Carlos Andemberg - Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script>
+        const idade = document.getElementById("idade")
+        const ano = new Date();
+        if(ano.getMonth() > 7){
+            idade.innerHTML = ano.getFullYear()-1994 +" anos"
+            
+        } 
+        else if(ano.getMonth() == 7){
+            if(ano.getDate()>=12){
+                idade.innerHTML = ano.getFullYear()-1994 +" anos"
+            }
+            else{
+                idade.innerHTML = ano.getFullYear()-1994-1+" anos"
+            }
+        }
+        else{
+            idade.innerHTML = ano.getFullYear()-1994-1 +" anos"
+        }
+    </script>
 
 </body>
 
