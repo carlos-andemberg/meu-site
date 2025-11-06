@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio de Desenvolvimento Web</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Define as fontes que importamos
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'mono': ['Roboto Mono', 'monospace'],
+                    },
+                    // Define a paleta de cores moderna
+                    colors: {
+                        'dark-bg': '#111827',
+                        'light-bg': '#1F2937',
+                        'primary': '#7C3AED',
+                        'primary-dark': '#6D28D9',
+                        'secondary': '#38BDF8', /* Azul-céu para o texto que digita */
+                        'light-text': '#F3F4F6',
+                        'medium-text': '#9CA3AF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Cria um cursor piscando */
+        #typing-effect::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+            color: var(--tw-color-secondary, #38BDF8);
+            /* Usa a cor 'secondary' do Tailwind */
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-light-text font-sans antialiased">
+
+    <header class="bg-light-bg/70 backdrop-blur-lg py-4 fixed w-full top-0 z-50 border-b border-white/10">
+        <nav class="max-w-6xl mx-auto px-4">
+            <ul class="flex justify-center space-x-2 sm:space-x-4">
+                <li><a href="#home"
+                        class="text-medium-text font-semibold py-2 px-3 sm:px-4 rounded-md transition-all duration-300 hover:text-light-text hover:bg-primary">Início</a>
+                </li>
+                <li><a href="#sobre"
+                        class="text-medium-text font-semibold py-2 px-3 sm:px-4 rounded-md transition-all duration-300 hover:text-light-text hover:bg-primary">Sobre
+                        Mim</a></li>
+                <li><a href="#projetos"
+                        class="text-medium-text font-semibold py-2 px-3 sm:px-4 rounded-md transition-all duration-300 hover:text-light-text hover:bg-primary">Projetos</a>
+                </li>
+                <li><a href="#contato"
+                        class="text-medium-text font-semibold py-2 px-3 sm:px-4 rounded-md transition-all duration-300 hover:text-light-text hover:bg-primary">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-light-text">
+                        Olá! Eu sou <span class="text-primary">Carlos Andemberg,</span>
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl text-medium-text mb-8 min-h-[3.75rem] sm:min-h-[2.25rem]"> <span
+                            id="typing-effect" class="font-bold text-secondary"></span>
+                        <span class="inline-block">Web apaixonado por criar soluções digitais.</span>
+                    </p>
+
+                    <a href="#projetos"
+                        class="inline-block bg-primary text-light-text py-3 px-8 rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-primary/30 hover:bg-primary-dark hover:-translate-y-1 hover:shadow-primary/40">
+                        Ver Meus Projetos
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <div
+                        class="w-96 h-[500px] mx-auto rounded-3xl overflow-hidden border-4 border-primary shadow-lg shadow-primary/40">
+                        <img src="/assets/eu.webp" alt="Minha imagem" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="sobre" class="py-20 px-4 max-w-4xl mx-auto text-center">
+            <h2
+                class="text-3xl sm:text-4xl font-extrabold mb-12 text-light-text border-b-4 border-primary inline-block pb-2">
+                Sobre Mim
+            </h2>
+            <div class="space-y-4 text-left max-w-3xl mx-auto">
+                <p class="text-lg sm:text-xl text-medium-text">
+                    Sou um desenvolvedor web com foco em transformar ideias em realidade através de código limpo e
+                    eficiente.
+                    Tenho experiência em <strong class="text-secondary font-mono font-bold">HTML, CSS,
+                        JavaScript</strong> e frameworks como <strong
+                        class="text-secondary font-mono font-bold">React</strong>. Minha paixão é construir interfaces
+                    intuitivas e funcionais que proporcionem uma ótima experiência ao usuário.
+                </p>
+                <p class="text-lg sm:text-xl text-medium-text">
+                    Sempre busco aprender novas tecnologias e aprimorar minhas habilidades para entregar o melhor
+                    resultado
+                    em cada projeto.
+                </p>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-20 px-4 max-w-6xl mx-auto text-center bg-light-bg rounded-2xl">
+            <h2
+                class="text-3xl sm:text-4xl font-extrabold mb-12 text-light-text border-b-4 border-primary inline-block pb-2">
+                Meus Projetos
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+
+                <div
+                    class="bg-dark-bg p-6 rounded-xl text-left border border-gray-700 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/20 h-full flex flex-col">
+
+                    <div class="flex-grow">
+                        <h3 class="text-secondary mb-3 font-mono text-xl font-semibold">
+                            Projeto 1: Site da Igreja ADMP Tabuleiro
+                        </h3>
+                        <p class="text-medium-text text-base">
+                            Site informacional para os fiéis da Igreja. Tecnologias utilizadas: Vite + React, CSS.
+                        </p>
+                    </div>
+
+                    <a href="https://adtabuleiro.netlify.app" target="_blank"
+                        class="inline-block bg-transparent text-primary border-2 border-primary py-2 px-5 rounded-md text-sm font-semibold transition-all duration-300 hover:bg-primary hover:text-light-text mt-6">
+                        Ver Projeto
+                    </a>
+                </div>
+
+                <div
+                    class="bg-dark-bg p-6 rounded-xl text-left border border-gray-700 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-primary/20 h-full flex flex-col">
+
+                    <div class="flex-grow">
+                        <h3 class="text-secondary mb-3 font-mono text-xl font-semibold">
+                            Projeto 2: Site para uma médica veterinária
+                        </h3>
+                        <p class="text-medium-text text-base">
+                            Site tipo landing page para que o cliente seja direcionado para o WhatsApp da Médica
+                            Veterinária. Tecnologias utilizadas: Vite + React, TailwindCSS, PostCSS.
+                        </p>
+                    </div>
+
+                    <a href="https://catharinavitalvet.com.br/" target="_blank"
+                        class="inline-block bg-transparent text-primary border-2 border-primary py-2 px-5 rounded-md text-sm font-semibold transition-all duration-300 hover:bg-primary hover:text-light-text mt-6">
+                        Ver Projeto
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contato" class="py-20 px-4 max-w-4xl mx-auto text-center">
+            <h2
+                class="text-3xl sm:text-4xl font-extrabold mb-8 text-light-text border-b-4 border-primary inline-block pb-2">
+                Vamos Conversar?
+            </h2>
+            <p class="text-lg sm:text-xl text-center text-medium-text mb-8 max-w-2xl mx-auto">
+                Se você tem um projeto em mente ou apenas quer trocar uma ideia, sinta-se à vontade para entrar em
+                contato!
+            </p>
+            <a href="mailto:cinfoandemberg@gmail.com"
+                class="inline-block bg-primary text-light-text py-3 px-8 rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-primary/30 hover:bg-primary-dark hover:-translate-y-1 hover:shadow-primary/40 mb-10">
+                Enviar um E-mail
+            </a>
+
+            <div class="flex justify-center space-x-8">
+                <a href="https://www.linkedin.com/in/carlos-andemberg-b91a52180/" target="_blank"
+                    class="text-medium-text text-lg font-semibold transition-colors duration-300 hover:text-primary">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/carlos-andemberg" target="_blank"
+                    class="text-medium-text text-lg font-semibold transition-colors duration-300 hover:text-primary">
+                    GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light-bg text-medium-text text-center py-8 mt-16">
+        <p>&copy; <span id="atual"></span> Carlos Andemberg - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const atual = document.getElementById("atual")
+        const ano = new Date();
+        atual.innerHTML = ano.getFullYear()
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const el = document.getElementById("typing-effect");
+            // Palavras que vão alternar
+            const words = ["Desenvolvedor", "Programador", "Criador de Soluções", "Especialista em Web"];
+
+            // Variáveis de controle
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 150; // Velocidade de digitação
+            let eraseSpeed = 100; // Velocidade ao apagar
+            let delayBetweenWords = 1500; // Pausa com a palavra completa
+
+            function type() {
+                const currentWord = words[wordIndex];
+                let typeSpeedCurrent = typingSpeed;
+
+                if (isDeleting) {
+                    // Apagando...
+                    el.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                    typeSpeedCurrent = eraseSpeed;
+                } else {
+                    // Escrevendo...
+                    el.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                // Condições de mudança de estado
+                if (!isDeleting && charIndex === currentWord.length) {
+                    // Terminou de escrever a palavra
+                    isDeleting = true;
+                    typeSpeedCurrent = delayBetweenWords; // Pausa antes de apagar
+                } else if (isDeleting && charIndex === 0) {
+                    // Terminou de apagar
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length; // Vai para a próxima palavra
+                    typeSpeedCurrent = 500; // Pausa antes de escrever a nova
+                }
+
+                setTimeout(type, typeSpeedCurrent);
+            }
+
+            // Inicia o efeito
+            type();
+        });
+    </script>
+</body>
+
+</html>
